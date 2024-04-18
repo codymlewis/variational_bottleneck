@@ -73,7 +73,7 @@ def update_step(state, X, Y, beta: float = 1e-3):
         logits = jnp.clip(logits, 1e-15, 1 - 1e-15)
         one_hot = jax.nn.one_hot(Y, logits.shape[-1])
         ce_loss = -jnp.mean(jnp.einsum("bl,bl -> b", one_hot, jnp.log(logits)))
-        vb_loss = -0.5 * einops.reduce(1 + 2 * jnp.log(std) - mu**2 - std**2, 'b x -> b', 'sum').mean() / jnp.log(2)
+        vb_loss = -0.5 * einops.reduce(1 + 2 * jnp.log(std) - mu**2 - std**2, 'b i -> b', 'sum').mean() / jnp.log(2)
         return ce_loss + beta * vb_loss
 
     state = state.replace(key=vb_train_key)
