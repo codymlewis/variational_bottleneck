@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "variational_bottleneck"
+version = "0.1.0"
+description = "A flax implementation of the variational bottleneck from https://arxiv.org/abs/2108.04725"
+authors = ["Cody Lewis <hello@codymlewis.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tqdm = "^4.66.1"
+jax = "^0.4.25"
+einops = "^0.7.0"
+datasets = "^2.16.1"
+numpy = "^1.26.4"
+optax = "^0.2.2"
+scikit-learn = "^1.4.2"
+flax = "^0.8.2"
+pillow = "^10.3.0"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.4"
+jedi = "^0.19.1"
+flake8 = "^6.1.0"
+python-lsp-server = "^1.8.0"
+yapf = "^0.40.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
