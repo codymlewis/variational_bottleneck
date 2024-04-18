@@ -4,8 +4,8 @@ A flax implementation of the variational bottleneck from https://arxiv.org/abs/2
 
 ## Requirements
 
-- [Python 3.11+](python.org)
-- [Python Poetry](python-poetry.org)
+- [Python 3.11+](https://python.org)
+- [Python Poetry](https://python-poetry.org)
 
 ## Run
 
